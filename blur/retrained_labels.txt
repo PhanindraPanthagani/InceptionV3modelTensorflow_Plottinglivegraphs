@@ -1,0 +1,2 @@
+blur
+non blur

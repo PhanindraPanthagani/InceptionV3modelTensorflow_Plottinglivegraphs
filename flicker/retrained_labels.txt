@@ -1,0 +1,5 @@
+complete black
+diagonal black
+half black
+less than half black
+normal

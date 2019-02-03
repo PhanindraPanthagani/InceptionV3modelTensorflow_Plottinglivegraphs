@@ -1,0 +1,54 @@
+in One cmd type: 
+
+tensorboard --logdir training_summaries &
+
+
+### u can open the http link they have mentioned and see the graph after training	
+
+##### if u want to kill this session type :
+	pkill -f "tensorboard"
+
+
+
+another Cmd:to train:
+ 
+python retrain.py --bottleneck_dir=bottlenecks --how_many_training_steps=50 --model_dir=inception  --summaries_dir=training_summaries\basic  --output_graph=retrained_graph.pb --output_labels=retrained_labels.txt --image_dir=C:\MLChampions\Phani\data
+
+
+
+
+
+
+
+After this is done : to test: type:
+1) For Blur in this folder:
+-> Open CMD in this folder C:\Users\ppanthag\MLChampions\Phani\DEMO\blur
+
+python video_test2.py --graph "C:\Users\ppanthag\MLChampions\Phani\DEMO\blur\retrained_graph.pb" --labels "C:\Users\ppanthag\MLChampions\Phani\DEMO\blur\retrained_labels.txt" --video "C:\Users\ppanthag\MLChampions\Phani\DEMO\blur\test\blur_nonblur.mov"
+
+2) For Flicker in this folder:
+->Open CMD in this folder C:\Users\ppanthag\MLChampions\Phani\DEMO\flicker
+
+python video_test2.py --graph "C:\Users\ppanthag\MLChampions\Phani\DEMO\flicker\retrained_graph.pb" --labels C:\Users\ppanthag\MLChampions\Phani\DEMO\flicker\retrained_labels.txt --video "C:\Users\ppanthag\MLChampions\Phani\DEMO\flicker\test\final_demo_360x240.mp4"
+
+
+
+
+NOTE:
+in all commands, see the path and put proper path.. presently its my PCs path
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
